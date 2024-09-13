@@ -1,10 +1,7 @@
-package com.davidcms.decimaltobinary;
-
-import android.util.Log;
+package org.davidCMs;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
@@ -43,8 +40,8 @@ public class Base {
 
         bases.sort(Comparator.comparingInt(Base::getBase));
 
-        Log.d("Base", "bases: ");
-        bases.forEach((base1) -> Log.d("Base","   " + base1.name + " (" + base1.base + ")"));
+        //Log.d("Base", "bases: ");
+        //bases.forEach((base1) -> Log.d("Base","   " + base1.name + " (" + base1.base + ")"));
     }
 
     public static List<Base> getBases() {

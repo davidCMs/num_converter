@@ -21,3 +21,6 @@ dependencyResolutionManagement {
 
 rootProject.name = "decimal to binary"
 include ':app'
+include ':desktop'
+include 'core'
+

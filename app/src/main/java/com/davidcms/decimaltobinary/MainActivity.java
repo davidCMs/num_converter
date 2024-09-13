@@ -6,13 +6,14 @@ import android.text.TextWatcher;
 import android.view.View;
 import android.widget.*;
 import androidx.appcompat.app.AppCompatActivity;
+import org.davidCMs.Base;
+import org.davidCMs.ConversionUtils;
 
 public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         Base.getBases();
 
         //layout
@@ -108,11 +109,5 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
-    public static void main(String[] args) {
-
-    }
-
-
 
 }

@@ -1,7 +1,6 @@
-package com.davidcms.decimaltobinary;
+package org.davidCMs;
 
 import java.math.BigInteger;
-import java.util.HashMap;
 
 public class ConversionUtils {
 
