@@ -1,15 +1,11 @@
 package com.davidcms.decimaltobinary;
 
-import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.util.Log;
 import android.view.View;
 import android.widget.*;
 import androidx.appcompat.app.AppCompatActivity;
-
-import java.math.BigInteger;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -17,14 +13,16 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        Base.getBases();
+
         //layout
         LinearLayout layout = new LinearLayout(this);
         layout.setOrientation(LinearLayout.VERTICAL);
         layout.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT));
 
         //dropdown options
-        String[] dropdownOptions = new String[]{"Decimal", "Binary", "Hex"};
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, dropdownOptions);
+        Base[] dropdownOptions = Base.getBases().toArray(new Base[0]);
+        ArrayAdapter<Base> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, dropdownOptions);
 
         //convert from selection
         LinearLayout convertFromLayout = new LinearLayout(this);
@@ -81,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
         AdapterView.OnItemSelectedListener selectedListener = new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                output.setText(convert((String) convertFromDropdown.getSelectedItem(), (String) convertToDropdown.getSelectedItem(), input.getText().toString()));
+                output.setText(ConversionUtils.convert((Base) convertFromDropdown.getSelectedItem(), (Base) convertToDropdown.getSelectedItem(), input.getText().toString()));
             }
 
             @Override
@@ -101,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                output.setText(convert((String) convertFromDropdown.getSelectedItem(), (String) convertToDropdown.getSelectedItem(), input.getText().toString()));
+                output.setText(ConversionUtils.convert((Base) convertFromDropdown.getSelectedItem(), (Base) convertToDropdown.getSelectedItem(), input.getText().toString()));
             }
 
             @Override
@@ -109,32 +107,12 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+    }
+
+    public static void main(String[] args) {
 
     }
 
-    private String convert(String from, String to, String value) {
-        try {
-            int baseIn = baseFromOption(from);
-            int baseOut = baseFromOption(to);
-            BigInteger decimal = new BigInteger(value, baseIn);
-            return decimal.toString(baseOut);
-        } catch (Exception e) {
-            return "ERROR: Invalid input";
-        }
-    }
-
-    private int baseFromOption(String option) {
-        switch (option) {
-            case "Binary":
-                return 2;
-            case "Decimal":
-                return 10;
-            case "Hex":
-                return 16;
-            default:
-                return 69;
-        }
-    }
 
 
 }
