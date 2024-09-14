@@ -3,7 +3,7 @@ plugins {
 }
 
 group = 'org.davidCMs'
-version = 'unspecified'
+version = '1.2'
 
 repositories {
 
