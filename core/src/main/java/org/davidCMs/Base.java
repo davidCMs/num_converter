@@ -22,6 +22,22 @@ public class Base {
     public static final Base TETRADECIMAL = new Base("Tetradecimal", 14);
     public static final Base PENTADECIMAL = new Base("Pentadecimal", 15);
     public static final Base HEXADECIMAL = new Base("Hexadecimal", 16);
+    public static final Base HEPTADECIMAL = new Base("Heptadecimal", 17);
+    public static final Base OCTODECIMAL = new Base("Octodecimal", 18);
+    public static final Base ENNEADECIMAL = new Base("Enneadecimal", 19);
+    public static final Base VIGESIMAL = new Base("Vigesimal", 20);
+    public static final Base UNVIGESIMAL = new Base("Unvigesimal", 21);
+    public static final Base DUOVIGESIMAL = new Base("Duovigesimal", 22);
+    public static final Base TRIVIGESIMAL = new Base("Trivigesimal", 23);
+    public static final Base TETRAVIGESIMAL = new Base("Tetravigesimal", 24);
+    public static final Base PENTAVIGESIMAL = new Base("Pentavigesimal", 25);
+    public static final Base HEXAVIGESIMAL = new Base("Hexavigesimal", 26);
+    public static final Base HEPTAVIGESIMAL = new Base("Heptavigesimal", 27);
+    public static final Base OCTOVIGESIMAL = new Base("Octovigesimal", 28);
+    public static final Base ENNEAVIGESIMAL = new Base("Enneavigesimal", 29);
+    public static final Base TRIGESIMAL = new Base("Trigesimal", 30);
+    public static final Base UNTRIGESIMAL = new Base("Untrigesimal", 31);
+    public static final Base DUOTRIGESIMAL = new Base("Duotrigesimal", 32);
 
     private static final List<Base> bases = new ArrayList<>();
 
@@ -39,9 +55,6 @@ public class Base {
         }
 
         bases.sort(Comparator.comparingInt(Base::getBase));
-
-        //Log.d("Base", "bases: ");
-        //bases.forEach((base1) -> Log.d("Base","   " + base1.name + " (" + base1.base + ")"));
     }
 
     public static List<Base> getBases() {
