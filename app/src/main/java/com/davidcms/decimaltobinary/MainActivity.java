@@ -8,7 +8,9 @@ import android.widget.*;
 import androidx.appcompat.app.AppCompatActivity;
 import org.davidCMs.Base;
 import org.davidCMs.ConversionUtils;
-
+/**
+ * The Main activity that displays the ui on android
+ */
 public class MainActivity extends AppCompatActivity {
 
     @Override

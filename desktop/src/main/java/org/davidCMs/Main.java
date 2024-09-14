@@ -6,6 +6,10 @@ import javax.swing.event.DocumentListener;
 import java.awt.*;
 import java.awt.event.ActionListener;
 
+/**
+ * Main class for the desktop ui
+ */
+
 public class Main {
     public static void main(String[] args) {
         JFrame frame = new JFrame("Number Converter");
