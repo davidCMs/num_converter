@@ -5,6 +5,10 @@ import java.math.BigInteger;
 
 /**
  * The {@code ConversionUtils} class is holds methods to manage conversion between different {@code Base}
+ *
+ * @author davidCMs
+ * @see Base
+ * @since 1.0
  * */
 public class ConversionUtils {
 

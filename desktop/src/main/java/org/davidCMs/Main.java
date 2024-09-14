@@ -8,6 +8,11 @@ import java.awt.event.ActionListener;
 
 /**
  * Main class for the desktop ui
+ *
+ * @author davidCMs
+ * @see Base
+ * @see ConversionUtils
+ * @since 1.1
  */
 
 public class Main {

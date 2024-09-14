@@ -1,13 +1,14 @@
 package org.davidCMs;
 
 import java.lang.reflect.Field;
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Vector;
+import java.util.*;
 
 /**
  * The {@code Base} class is a data class to make handling conversion and naming of different bases easier
+ *
+ * @author davidCMs
+ * @see ConversionUtils
+ * @since 1.0
  * */
 public class Base {
 

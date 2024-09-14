@@ -10,6 +10,11 @@ import org.davidCMs.Base;
 import org.davidCMs.ConversionUtils;
 /**
  * The Main activity that displays the ui on android
+ *
+ * @author davidCMs
+ * @see Base
+ * @see ConversionUtils
+ * @since 1.0
  */
 public class MainActivity extends AppCompatActivity {
 
