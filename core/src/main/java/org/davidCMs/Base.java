@@ -4,7 +4,11 @@ import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Vector;
 
+/**
+ * The {@code Base} class is a data class to make handling conversion and naming of different bases easier
+ * */
 public class Base {
 
     public static final Base BINARY = new Base("Binary", 2);
@@ -40,7 +44,8 @@ public class Base {
     public static final Base DUOTRIGESIMAL = new Base("Duotrigesimal", 32);
 
     private static final List<Base> bases = new ArrayList<>();
-
+    /**
+     * The static initializer uses java reflect to populate the bases map*/
     static {
         Field[] fields = Base.class.getDeclaredFields();
         for (Field field : fields) {
