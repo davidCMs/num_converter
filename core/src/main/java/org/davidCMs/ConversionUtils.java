@@ -9,7 +9,7 @@ public class ConversionUtils {
             int baseIn = from.getBase();
             int baseOut = to.getBase();
             BigInteger decimal = new BigInteger(value, baseIn);
-            return decimal.toString(baseOut);
+            return decimal.toString(baseOut).toUpperCase();
         } catch (Exception e) {
             return "ERROR: Invalid input";
         }
